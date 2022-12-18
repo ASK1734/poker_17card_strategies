@@ -18,7 +18,7 @@ This is a player who plays randomly.
 The player name is ***rambo***.
 
 ### <span style="color:orange">team18.py</span>
-The player that I developed. It also includes my own strategies of betting, raising, folding, and change card according to the cards in hand.
+The player that developed by Shau Kai Chen(me). It includes my own strategies of betting, raising, folding, and change card according to the cards in hand.
 The player's name is ***veryopopkai***.
 
 ### utility.py
