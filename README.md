@@ -1,11 +1,5 @@
 # Seventeen Cards
 
-## Overview
-This release is intended to  
-1. get you familiar with the communication between the host and the player, and    
-2. provide player templates based on which you can develop your own player.
-
----
 
 ## Contents
 This release includes four Python source files, a README file, the game flow, and the game instruction file.
