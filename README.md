@@ -124,8 +124,8 @@ If the game stands, the winner will be determined and the balance shown.
 Currently, the number of games is 1000 (`gameCount = 1000` at line 302 of PK.py).  
 Feel free to adjust the game count.
 
-## <span style="color:orange">Designing Your Own Player</span>
-There are now two players, i.e., Ref01 and Ref02, that you can reference.  
+## <span style="color:orange">What you should notice if you want to design your own player</span>
+There are now two sample players(Ref01 and Ref02) and one designed player by Shau Kai(team18)
 **Ref01** is a somewhat deterministic player; **Ref02**, on the other hand, is a random player.
 
 A player file must define the following.  
