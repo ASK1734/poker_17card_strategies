@@ -1,53 +1,9 @@
 # Seventeen Cards
-***code\_v2.1\_20180527***
 
 ## Overview
 This release is intended to  
 1. get you familiar with the communication between the host and the player, and    
 2. provide player templates based on which you can develop your own player.
-
----
-
-## <span style="color:red">Note</span>
-For the player codes, i.e., Ref01.py, Ref01_2.py, Ref02.py, and Ref02_2.py, the only difference between v2.1 and v2 is just one additional line -- second line in the following code segment.
-
-
-	########## ########## ########## ########## SHOW HANDS
-    response = iQ.get() # opponent cards J,HA,DA,CQ,CA <=== added in v2.1
-    response = iQ.get() # win, lose, or tie
-    if response == 'win': # win the pot and ante (myBet == oppBet)
-        balance += (myBet1 + myBet2 + ANTE) * 2
-    elif response == 'tie': # split the pot and get ante back
-        balance += myBet1 + myBet2 + ANTE
-
-If you have started working on your player based on any v2 player, you can make it work by including the line yourself.
-
-For all the other files, use the v2.1 distribution.
-
----
-
-## <span style="color:orange">Bug Fixes</span>
-### <span style="color:orange">v2.0</span>
-1. There is a bug in the card changing process -- the host did not return replacement cards!  
-This is fixed in v2.
-2. The host *randomly* determines the game result. This is fixed.
-3. The player who gets to change cards first can exchange up to 5 cards.   
-This is not true for the second player (but allowed in v0 and v1).  
-If the first player changes *N* cards, the second player can change up to 7-*N* cards.
-
-### <span style="color:red">v2.1</span>
-* Before showing the game result (win, lose, or tie), the host will inform each player the opponent's cards.  
-
-## <span style="color:orange">What's new in v2?</span>
-1. Now there are two players: Ref01 and Ref02.  
-Ref01 is a more deterministic player.   
-Ref02 is similar to G01 in v0 and v1 but with the above mentioned bugs fixed.
-2. Easier to include your own player in the PK game.
-3. v2 introduces the **timeout** mechanism.  
-If a player fails to respond within the specified amount of time (currently, 10 seconds), host will terminate the game, with the timeout-ed player to blame.
-4. v2 pays attention to player **misbehavior**, for example, over-bet, under-bet, changing too many cards.  
-If any misbehavior is observed, host will terminate the game, with the misbehaved player to blame.
-5. The "fate17_instructions" pdf file is modified to fix the card changing bug <span style="color:red"> add the instruction that shows the opponent's cards</span>.
 
 ---
 
@@ -63,18 +19,8 @@ This player set the betting target according to the cards in hand.
 The card changing strategy is straightforward -- give up the singletonn cards except for straight.  
 The player's name is ***sandy***.
 
-### <span style="color:orange">Ref01_2.py</span>
-A copy of "Ref01.py".
-The only difference is that the player name is ***sandy_2***.  
-If you want Sandy to play against herself, you should use Ref01 and Ref01_2 as the players.
-
-### <span style="color:orange">Ref02.py</span>
-This is similar to G01.py who plays randomly.  
-The difference is that the bugs in G01.py are fixed.  
-The player name is ***rambo***.
-
-### <span style="color:orange">Ref02_2.py</span>  
-This is to "Ref02" as Ref01_2 is to Ref01.
+### <span style="color:orange">team18.py</span>
+The player that I develop.
 
 ### utility.py
 Tools and classes defined to facilitate the game play.  
