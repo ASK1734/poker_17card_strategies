@@ -13,8 +13,13 @@ This player set the betting target according to the cards in hand.
 The card changing strategy is straightforward -- give up the singletonn cards except for straight.  
 The player's name is ***sandy***.
 
+### <span style="color:orange">Ref02.py</span>
+This is a player who plays randomly.    
+The player name is ***rambo***.
+
 ### <span style="color:orange">team18.py</span>
-The player that I develop.
+The player that I developed. It also includes my own strategies of betting, raising, folding, and change card according to the cards in hand.
+The player's name is ***veryopopkai***.
 
 ### utility.py
 Tools and classes defined to facilitate the game play.  
@@ -74,11 +79,11 @@ Here, rambo decides to bet 15; so, sandy receives the instruction `opponent bet 
 	<<<<<<<<<<<<<<<<<<<<<<<<< CHANGING CARDS
 	> rambo: action:change
 	rambo > change CQ,J,CK
-	> rambo: cards SK,DJ,HK                 # added in v2.
+	> rambo: cards SK,DJ,HK                 
 	> sandy: opponent change 3 cards
 	> sandy: action:change
 	sandy > change SQ,DK
-	> sandy: cards SA,HJ                    # added i v2.
+	> sandy: cards SA,HJ                    
 	> rambo: opponent change 2 cards
 	
 This is the card changing stage.  
@@ -103,8 +108,8 @@ This is the second betting interval; it is the same as interval 1 except for the
 
 
 	<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SHOW HANDS
-	> rambo: opponent cards HA,DA,CA,SA,HJ    # added in v2.1
-	> sandy: opponent cards HQ,SJ,SK,DJ,HK    # added in v2.1
+	> rambo: opponent cards HA,DA,CA,SA,HJ    
+	> sandy: opponent cards HQ,SJ,SK,DJ,HK    
 	> sandy: win
 	> rambo: lose
 	> rambo's balance: -3447
